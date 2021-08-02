@@ -1,58 +1,56 @@
 import React from 'react';
 import ParticleHeader from './ParticleHeader';
-import {makeStyles} from '@material-ui/core';
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
+import {Divider, makeStyles} from '@material-ui/core';
 import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
     root:{
-        width:'100%',
-        position:"relative"
+        position:"static",
     },
     centeredText:{
         color:"#ffffff",
         position:"absolute",
         textAlign:"center",
         verticalAlign:"middle",
-        width:"100%",
 
         [theme.breakpoints.down('xs')]:{
-            top:"0.1%",
+            top:"12%",
             margin:"auto",
             paddingRight:"15px",
             paddingLeft:"15px",
+            fontSize: "1.5rem",
         },
         [theme.breakpoints.up('sm')]:{
             top:"15%",
             margin:"auto",
             paddingBottom:"30px",
+            paddingLeft:"10%",
+            paddingRight:"10%",
             padding:"20px",
+            fontSize: "1.5rem",
+
         },
         [theme.breakpoints.up('md')]:{
-            top:"18%",
-            margin:"auto",
+            margin:"auto auto",
             paddingBottom:"30px",
             paddingLeft:"15%",
             paddingRight:"15%",
-            padding:"20px",
-        },
+            fontSize: "1.75rem",
 
-        [theme.breakpoints.up('lg')]:{
-            top:"30%",
-            margin:"auto, auto, 20% , 20%",
-            paddingBottom:"30px",
-            paddingLeft:"20%",
-            paddingRight:"20%",
-            padding:"15px",
         },
         [theme.breakpoints.up('xl')]:{
-            top:"20%",
-            margin:"auto, auto, 20% , 20%",
-            paddingBottom:"30px",
+            margin:"auto auto",
+            top:"15%",
             paddingLeft:"20%",
+            paddingBottom:"1.5rem",
             paddingRight:"20%",
-            padding:"15px",
+            padding:"1rem",
+            fontSize: "2.75rem",
+        },
+        [theme.breakpoints.between('lg', "xl")]:{
+            margin:"auto auto",
+            fontSize: "1.75rem",
+
         },
 
     },
@@ -62,9 +60,9 @@ function IntroPanel(){
     const classes = useStyles();
 
     return(
-        <div className={classes.root}>
-            <Box>
-                <ParticleHeader className={classes.particleSquare}/>
+        <div>
+            <Box className={classes.root}>
+                <ParticleHeader />
                 <div className={classes.centeredText}>
                     <Box component="div" whiteSpace="normal">
                         <h1 >James Hessell-Bowman</h1>
@@ -74,7 +72,10 @@ function IntroPanel(){
                     </Box>
                     <Box component="div" whiteSpace="normal">
                         I am a Software Engineer and Web Developer that uses a variety of different programming languages to make fun and interesting projects.
-                        I am currently looking for work as a remote employee or contractor and I also take on projects with my company io Softworks.
+                    </Box>
+                    <Divider/>
+                    <Box component="div" whiteSpace="normal">
+                        I am currently looking for work as a remote employee or contractor. I also have access to a team for larger business projects with ioSoftworks.
                     </Box>
                     <p> </p>
                 </div>

@@ -9,13 +9,15 @@ function ParticleHeader () {
     return (
         <Particles
             id="tsparticles"
+            width="100%"
+            height="100vh"
             options={{
                 background: {
                     color: {
                         value: backgroundColor,
-                    },
+                    }
                 },
-                fpsLimit: 120,
+                fpsLimit: 30,
                 interactivity: {
                     detectsOn: "canvas",
                     events: {
