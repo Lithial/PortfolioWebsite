@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "./components/NavBar";
 import IntroPanel from "./components/IntroPanel";
 import ProjectCards from "./components/ProjectCards";
 import atlas from "./assets/images/tinyAtlas.png"
@@ -28,7 +27,7 @@ function App() {
                     text: "Atlas is a Fullstack Application developed using the PERN stack. This stack consists of PostgreSQL, Express, React and Node.js. The whole stack is put together using Docker Compose and run on a Digital Ocean Droplet. When changes are made to the repo, Github Actions uses SSH to run a script on the Droplet that rebuilds the docker images with the new changes.",
                     list: [
                         {
-                            item: "PostgreSQL",
+                            item: "Postgre SQL",
                             icon: postgres
                         },
                         {
@@ -111,12 +110,9 @@ function App() {
     return (
     <>
         <IntroPanel />
-{/*
-        <NavBar />
-*/}
         <ProjectCards projects={projectList}/>
     </>
   );
-};
+}
 
 export default App;
