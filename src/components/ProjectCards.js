@@ -11,9 +11,7 @@ import {
     Typography
 } from "@material-ui/core";
 import {ReactComponent as github} from "../assets/icons/github.svg"
-import {ReactComponent as atlas} from "../assets/icons/iconmonstr-globe-3.svg"
 import Button from "@material-ui/core/Button";
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,6 +35,10 @@ const useStyles = makeStyles((theme) => ({
         height: 0,
         paddingTop: '56.25%', // 16:9
         flex: "1",
+        margin: "auto",
+        [theme.breakpoints.down('md')]:{
+            margin: "unset",
+        },
 
     },
     content: {
@@ -67,12 +69,19 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]:{
             //flexWrap: "wrap",
             display: "block",
+            paddingLeft: "8px",
+            paddingRight: "8px",
+            "&:nth-child(1)": {
+                // outline: "1px solid red",
+                paddingLeft: 0
+            },
         },
         [theme.breakpoints.down('xs')]:{
             //flexWrap: "wrap",
-            display: "inline-block",
+            display: "block",
             //outline:"1px solid red",
-            width: "13vw",
+            paddingLeft: "0",
+            paddingRight: "0",
         },
     },
 
@@ -80,7 +89,6 @@ const useStyles = makeStyles((theme) => ({
 
     },
     listText:{
-
     },
     lineBreak:{
         display: "hidden",
@@ -112,7 +120,7 @@ const ProjectCards = (props) => {
                                     <SvgIcon className={classes.svgIcon} component={github}/>
                                 </Button>
                                 <Button href={project.projectLink} target="_blank">
-                                    <SvgIcon className={classes.svgIcon} component={atlas} title={project.title}/>
+                                    <SvgIcon className={classes.svgIcon} component={project.icon} title={project.title}/>
                                 </Button>
                             </div>
                         }
@@ -125,6 +133,7 @@ const ProjectCards = (props) => {
                             className={classes.media}
                             image={project.image}
                             title={project.imageTitle}
+                            alt={project.imageTitle}
                         />
                         {/**************************Content Side************************/}
                         <CardContent className={classes.content}>
@@ -161,9 +170,15 @@ const ProjectCards = (props) => {
                                     </Typography>
                                     {/**************************Paragraph************************/}
 
-                                    <Typography variant="body2" color="textSecondary" component="p">
-                                        {project.techDescription.text}
-                                    </Typography>
+                                    {
+                                        project.techDescription.text.map((paragraph, index) => {
+                                        return (
+                                            <Typography key={index} variant="body2" color="textSecondary" component="p">
+                                                {paragraph}
+                                            </Typography>
+                                        )
+                                    })
+                                    }
                                 </div>
 
                                 <div className={classes.content}>

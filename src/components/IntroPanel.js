@@ -77,7 +77,10 @@ function IntroPanel(){
                     <Box component="div" whiteSpace="normal">
                         I am currently looking for work as a remote employee or contractor. I also have access to a team for larger business projects with ioSoftworks.
                     </Box>
-                    <p> </p>
+                    <Divider/>
+                    <Box component="div" whiteSpace="normal">
+                        This is a collection of my currently finished and in progress projects. I will add more information to each project as I make progress but feel free to ask questions about anything you see here.
+                    </Box>
                 </div>
             </Box>
         </div>
