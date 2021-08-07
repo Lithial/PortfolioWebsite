@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.js": "/PortfolioWebsite/static/js/main.082f55d1.chunk.js",
+    "main.js.map": "/PortfolioWebsite/static/js/main.082f55d1.chunk.js.map",
+    "runtime-main.js": "/PortfolioWebsite/static/js/runtime-main.667edec8.js",
+    "runtime-main.js.map": "/PortfolioWebsite/static/js/runtime-main.667edec8.js.map",
+    "static/js/2.e78b7c82.chunk.js": "/PortfolioWebsite/static/js/2.e78b7c82.chunk.js",
+    "static/js/2.e78b7c82.chunk.js.map": "/PortfolioWebsite/static/js/2.e78b7c82.chunk.js.map",
+    "index.html": "/PortfolioWebsite/index.html",
+    "static/js/2.e78b7c82.chunk.js.LICENSE.txt": "/PortfolioWebsite/static/js/2.e78b7c82.chunk.js.LICENSE.txt",
+    "static/media/amazonaws.3fdd12a2.svg": "/PortfolioWebsite/static/media/amazonaws.3fdd12a2.svg",
+    "static/media/digitalocean.52626514.svg": "/PortfolioWebsite/static/media/digitalocean.52626514.svg",
+    "static/media/docker.0c0999b7.svg": "/PortfolioWebsite/static/media/docker.0c0999b7.svg",
+    "static/media/express.8427b1f1.svg": "/PortfolioWebsite/static/media/express.8427b1f1.svg",
+    "static/media/github.3b21c250.svg": "/PortfolioWebsite/static/media/github.3b21c250.svg",
+    "static/media/githubactions.0d0ce3a7.svg": "/PortfolioWebsite/static/media/githubactions.0d0ce3a7.svg",
+    "static/media/go.37237ed5.svg": "/PortfolioWebsite/static/media/go.37237ed5.svg",
+    "static/media/iconmonstr-globe-3.16ad54be.svg": "/PortfolioWebsite/static/media/iconmonstr-globe-3.16ad54be.svg",
+    "static/media/link.8d570e79.svg": "/PortfolioWebsite/static/media/link.8d570e79.svg",
+    "static/media/nodedotjs.6d0ce605.svg": "/PortfolioWebsite/static/media/nodedotjs.6d0ce605.svg",
+    "static/media/null.a1a0c8e6.svg": "/PortfolioWebsite/static/media/null.a1a0c8e6.svg",
+    "static/media/postgresql.4d89da07.svg": "/PortfolioWebsite/static/media/postgresql.4d89da07.svg",
+    "static/media/react.8e63d418.svg": "/PortfolioWebsite/static/media/react.8e63d418.svg",
+    "static/media/tinyAtlas.9ba53cfa.png": "/PortfolioWebsite/static/media/tinyAtlas.9ba53cfa.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.667edec8.js",
+    "static/js/2.e78b7c82.chunk.js",
+    "static/js/main.082f55d1.chunk.js"
+  ]
+}
