@@ -14,11 +14,11 @@ const useStyles = makeStyles((theme) => ({
         verticalAlign:"middle",
 
         [theme.breakpoints.down('xs')]:{
-            top:"3%",
-            margin:"auto",
+            margin:"auto auto",
+            top: "5px",
             paddingRight:"15px",
             paddingLeft:"15px",
-            fontSize: "1.5rem",
+            fontSize: "1.25rem",
         },
         [theme.breakpoints.up('sm')]:{
             top:"15%",
