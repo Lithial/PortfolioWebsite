@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         verticalAlign:"middle",
 
         [theme.breakpoints.down('xs')]:{
-            top:"12%",
+            top:"7%",
             margin:"auto",
             paddingRight:"15px",
             paddingLeft:"15px",
