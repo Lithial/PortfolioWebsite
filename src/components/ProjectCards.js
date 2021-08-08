@@ -45,8 +45,15 @@ const useStyles = makeStyles((theme) => ({
         flex: "1",
     },
     svgIcon:{
-      width: "2.5em",
-      height: "1.5em",
+      width: "2em",
+      height: "2em",
+    },
+    text: {
+        fontSize: "2rem",
+        outline: "1px solid red",
+        [theme.breakpoints.down('xs')]:{
+            fontSize: "1.3rem"
+        }
     },
     list: {
         paddingLeft: "25px",
@@ -62,7 +69,12 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]:{
             paddingLeft: "0",
             paddingRight: "0",
-            flexDirection:"row",
+        },
+        [theme.breakpoints.down('xs')]:{
+            paddingLeft: "0",
+            paddingRight: "0",
+            flexDirection: "column",
+            alignItems:"center"
         }
     },
     listItem:{
@@ -76,23 +88,43 @@ const useStyles = makeStyles((theme) => ({
                 paddingLeft: 0
             },
         },
-        [theme.breakpoints.down('xs')]:{
+        [theme.breakpoints.down('sm')]:{
             //flexWrap: "wrap",
             display: "block",
             //outline:"1px solid red",
             paddingLeft: "0",
             paddingRight: "0",
         },
+        [theme.breakpoints.down('xs')]:{
+            display: "flex",
+            flexDirection: "row",
+            paddingLeft: "0",
+            paddingRight: "0",
+            paddingTop:"15px",
+
+        }
     },
 
     listIcon:{
-
+        [theme.breakpoints.down('xs')]:{
+            // outline: "1px solid red",
+            width: "50%",
+            margin: "auto",
+            justifyContent: "end",
+            paddingRight:"20px",
+        }
     },
     listText:{
+        [theme.breakpoints.down('xs')]:{
+            // outline: "1px solid blue",
+            width: "50%",
+            fontSize: "1.3em",
+        }
     },
     lineBreak:{
-        display: "hidden",
-    }
+        flexBasis: "100%",
+        height: "0",
+    },
 
 
 }));
@@ -190,7 +222,7 @@ const ProjectCards = (props) => {
                                                 return (
                                                     <ListItem className={classes.listItem} key={index}>
                                                         <ListItemIcon className={classes.listIcon}>
-                                                            <SvgIcon component={listItem.icon}/>
+                                                            <SvgIcon className={classes.svgIcon} component={listItem.icon}/>
                                                         </ListItemIcon>
                                                         <ListItemText
                                                             className={classes.listText}
