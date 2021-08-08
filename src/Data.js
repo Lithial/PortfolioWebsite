@@ -19,7 +19,7 @@ const Data = [
     {
         index: 0,
         title: "Atlas",
-        githubLink: "https://www.github.com/lithial/",
+        githubLink: "https://github.com/pixel-rocket/atlas",
         projectLink: "https://atlas.lithial.me",
         icon:globe,
         appDescription:
