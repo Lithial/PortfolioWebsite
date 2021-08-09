@@ -1,77 +1,80 @@
 import React from 'react';
-import { Typography } from "@material-ui/core";
+import {Avatar, Card, SvgIcon, Typography} from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import Divider from "@material-ui/core/Divider";
-import Box from "@material-ui/core/Box";
+import me from "../assets/images/me.jpg"
+import {ReactComponent as github} from "../assets/icons/github.svg";
+import {ReactComponent as linkedIn} from "../assets/icons/linkedin.svg";
+import {ReactComponent as twitter} from "../assets/icons/twitter.svg";
 
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        '& > *': {
-            margin: theme.spacing(1),
-        },
+    root:{
+        maxWidth: 1024,
+        minWidth: 280,
+        margin: "0 auto",
+        padding: "3%"
     },
-    container: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(12, 1fr)',
-        gridGap: theme.spacing(3),
+    avatar: {
+        width: "10em",
+        height: "10em",
+        margin: "0 auto",
+        borderRadius: "15% 15% 2% 2%"
     },
-    box:{
-        margin:"auto",
-        width: "50%"
+    text:{
+        margin: "10px auto",
+        width: "50%",
+        textAlign:"center",
+
+    },
+    socials: {
+        margin: "auto",
+
+    },
+    flex:{
+        display:"flex",
+        width:"50%",
+        margin:"auto"
+    },
+    center:{
+        margin: "auto"
+    },
+    svgIcon:{
+
     }
+
+
+
 }));
 
 function ContactInfo(){
     const classes = useStyles();
     return (
-        <Grid container spacing={3}>
-            <Grid item xs={3}
-                  direction={"column"}
-                  justify={"space-between"}
-                  alignItems={"center"}>
-            </Grid>
-            <Grid item xs={5}
-                  direction={"row"}
-                  justify={"space-between"}
-                  alignItems={"left"}>
-                <Typography variant={"h4"}>
-                    About Me
-                </Typography>
-                <Divider className={classes.divider} />
-                <Typography variant={"body1"}>
-                    I have professional experience developing
-                    a feature used by clients internationally from
-                    my time at Re-Leased Software Ltd.<br/>
-                    During this time I developed a modal and process
-                    for bulk email functionality using .Net Core, C#,
-                    JavaScript, Html and CSS. <br/>
-                    I am an excellent team player, am
-                    competent in many programming
-                    languages, and strive constantly for
-                    professional Improvement and
-                    success.<br/>
-                    I have proven soft-skills in leadership
-                    and support through more than 5
-                    years experience in retail and customer
-                    facing roles.<br/>
-                    My future goals involve working on projects that
-                    affect the world at large, working remotely for an
-                    overseas company and building my own company up to take
-                    on many big projects.<br/>
-                </Typography>
-
-            </Grid>
-            <Grid container item xs={3}
-                  direction={"row"}
-                  justify={"center"}
-                  alignItems={"center"}>
-                <Button>Download Resume</Button>
-            </Grid>
-        </Grid>
+       <Card className={classes.root}>
+           <div className={classes.center}>
+               <Avatar className={classes.avatar} src={me}/>
+               <Typography className={classes.text} variant={"body2"}>
+               Hello there, I am a Software Engineer and Nerd from New Zealand.
+               With a BCS from the Eastern Institute of Technology, I have developed the skills required to make
+               applications, websites, games, bots and more.
+               </Typography>
+               <Typography className={classes.text} variant={"body2"}>
+                   I have worked with big New Zealand companies and small Australian Indie companies,
+                   as well as starting my own company to work on websites and applications locally in my community.
+               </Typography>
+               <div className={classes.flex}>
+                   <Button className={classes.socials} href="https://github.com/Lithial" target="_blank">
+                       <SvgIcon className={classes.svgIcon} component={github}/>
+                   </Button>
+                   <Button className={classes.socials} href="https://www.linkedin.com/in/james-hessell-bowman/" target="_blank">
+                       <SvgIcon className={classes.svgIcon} component={linkedIn}/>
+                   </Button>
+                   <Button className={classes.socials} href="https://www.twitter.com/lithial13" target="_blank">
+                       <SvgIcon className={classes.svgIcon} component={twitter}/>
+                   </Button>
+               </div>
+           </div>
+       </Card>
     )
 }
 export default ContactInfo;

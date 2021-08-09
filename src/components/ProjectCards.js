@@ -45,8 +45,9 @@ const useStyles = makeStyles((theme) => ({
         flex: "1",
     },
     svgIcon:{
-      width: "2em",
-      height: "2em",
+        width:  "2em",
+        height: "2em",
+        float:"right"
     },
     text: {
         fontSize: "2rem",
@@ -110,7 +111,8 @@ const useStyles = makeStyles((theme) => ({
             // outline: "1px solid red",
             width: "50%",
             margin: "auto",
-            justifyContent: "end",
+            justifyContent: "flex-end",
+            alignItems: "end",
             paddingRight:"20px",
         }
     },
